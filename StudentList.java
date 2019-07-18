@@ -7,9 +7,9 @@ public class StudentList
 	{
 
 //		Check arguments
-		if(args[0].equals("a")) 
+		if(args[0].equals("a")) // comments on For loop
 		{
-			System.out.println("Loading data ...");			
+			System.out.println("Loading data ...");		
 			try 
 			{
 			   BufferedReader stdnt = new BufferedReader(
@@ -40,11 +40,11 @@ public class StudentList
 							)
 							); 
 			              String read = stdnt.readLine();
-			              System.out.println(r);
+			              System.out.println(read);
 			String i[] = read.split(",");	
-			Random variable1 = new Random();
-				int  variable2= variable1.nextInt();
-					System.out.println(i[variable1]);
+			Random x = new Random();
+				int  y= x.nextInt();
+					System.out.println(i[y]);
 				}
 				catch (Exception e)
 			         {
@@ -65,8 +65,8 @@ public class StudentList
 	        String df = "dd/mm/yyyy-hh:mm:ss a";
 	        DateFormat dateFormat = new SimpleDateFormat(df);
 	        String fd= dateFormat.format(d);
-			s.write(", "+t+"\nList last updated on "+fd);
-			s.close();
+			stdnt.write(", "+t+"\nList last updated on "+fd);
+			stdnt.close();
 
 					 } 
 					 catch (Exception e)
